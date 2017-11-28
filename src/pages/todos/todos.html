@@ -10,7 +10,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-list *ngFor="let todo of todos">
-    <ion-item>{{ todo.todo }}</ion-item>
+  <ion-list>
+    <button ion-item *ngFor="let todo of todos" navPush="TodoPage" [navParams]="todo">
+      {{ todo.todo }}
+    </button>
   </ion-list>
 </ion-content>
